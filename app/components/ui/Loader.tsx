@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import loaderImage from '@/app/assets/images/loaderImg.png';
+import loaderImage from '@/app/assets/loaderImg.png';
 
 const Loader = () => {
   return (

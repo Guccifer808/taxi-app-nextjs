@@ -2,14 +2,13 @@ import { FC, useEffect, useState } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 
-import './globals.css';
-
 import favIcon from '@/app/assets/favicon.ico';
 import Loader from '../ui/Loader';
 
 interface ILayout {
   title: string;
-  children: React.ReactNode;
+  //   children: React.ReactNode;
+  children: any;
 }
 
 const Layout: FC<ILayout> = ({ children, title }) => {
@@ -33,7 +32,7 @@ const Layout: FC<ILayout> = ({ children, title }) => {
       </Head>
       <Script
         strategy='beforeInteractive'
-        src={`https://maps.googleapis.com/maps/api/js?kay=${process.env.MAP_KEY}&libraries=places`}
+        src={`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`}
       />
       <div
         style={{ maxWidth: 480 }}
